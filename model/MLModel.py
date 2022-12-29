@@ -18,7 +18,7 @@ def print_statistics(predictions, y_test, model):
   ax = plt.subplot()
   con_mat = confusion_matrix(y_test, predictions)
   sns.heatmap(con_mat, annot = True, fmt = 'g', ax=ax)
-  ax.set_title('Confusion Matrix')
+  ax.set_title('{} Confusion Matrix'.format(model))
   ax.set_ylabel('True label')
   ax.set_xlabel('Predicted label')
   labels = ['No cancer', 'Cancer']
